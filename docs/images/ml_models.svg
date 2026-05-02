@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="white"/>
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">ML Pipeline — Model Training &amp; Registry</text>
+
+  <!-- Data Sources -->
+  <rect x="30" y="60" width="180" height="120" rx="8" fill="#e8f4fd" stroke="#29B5E8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="85" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#29B5E8">Data Sources</text>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">UNIT_DISPATCHES</text>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">INCIDENTS</text>
+  <text x="120" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">INCIDENT_CALLS</text>
+  <text x="120" y="159" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">GEOGRAPHIC_ZONES</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="120" x2="260" y2="120" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+  <defs><marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#666"/></marker></defs>
+
+  <!-- Notebook -->
+  <rect x="260" y="60" width="200" height="120" rx="8" fill="#fef0f0" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="85" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e74c3c">08_ml_models.ipynb</text>
+  <text x="360" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Feature Engineering</text>
+  <text x="360" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Label Encoding</text>
+  <text x="360" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Train/Test Split (80/20)</text>
+  <text x="360" y="159" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Model Training (sklearn)</text>
+
+  <!-- Arrow to Registry -->
+  <line x1="460" y1="120" x2="510" y2="120" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Model Registry -->
+  <rect x="510" y="60" width="200" height="120" rx="8" fill="#f0fff0" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="610" y="85" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2ecc71">Snowflake Model Registry</text>
+  <text x="610" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">registry.log_model()</text>
+  <text x="610" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Version Management</text>
+  <text x="610" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Metric Tracking</text>
+  <text x="610" y="159" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Conda Dependencies</text>
+
+  <!-- Three Model Boxes -->
+  <!-- Model 1 -->
+  <rect x="50" y="230" width="220" height="130" rx="8" fill="white" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="50" y="230" width="220" height="30" rx="8" fill="#e74c3c"/>
+  <text x="160" y="250" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">RESPONSE_TIME_PREDICTOR</text>
+  <text x="160" y="280" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Algorithm: GradientBoostingRegressor</text>
+  <text x="160" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Features: Type, Severity, Zone,</text>
+  <text x="160" y="313" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Hour, Day, Population</text>
+  <text x="160" y="335" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#e74c3c">Output: Seconds (continuous)</text>
+  <text x="160" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Metric: MAE, R² Score</text>
+
+  <!-- Model 2 -->
+  <rect x="290" y="230" width="220" height="130" rx="8" fill="white" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="290" y="230" width="220" height="30" rx="8" fill="#3498db"/>
+  <text x="400" y="250" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">CALL_PRIORITY_CLASSIFIER</text>
+  <text x="400" y="280" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Algorithm: RandomForestClassifier</text>
+  <text x="400" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Features: Call Type, Subtype,</text>
+  <text x="400" y="313" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Source, Zone, Hour</text>
+  <text x="400" y="335" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#3498db">Output: Priority 1-5 (class)</text>
+  <text x="400" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Metric: Accuracy</text>
+
+  <!-- Model 3 -->
+  <rect x="530" y="230" width="220" height="130" rx="8" fill="white" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="530" y="230" width="220" height="30" rx="8" fill="#9b59b6"/>
+  <text x="640" y="250" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">CALL_VOLUME_FORECASTER</text>
+  <text x="640" y="280" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Algorithm: GradientBoostingRegressor</text>
+  <text x="640" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Features: Hour, Day, Month,</text>
+  <text x="640" y="313" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cyclical Encodings</text>
+  <text x="640" y="335" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#9b59b6">Output: Call count (continuous)</text>
+  <text x="640" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Metric: MAE, R² Score</text>
+
+  <!-- UDF Layer -->
+  <rect x="100" y="395" width="600" height="40" rx="8" fill="#fff8f0" stroke="#e67e22" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e67e22">SQL UDFs → MODEL(name, V1)!PREDICT() → Agent Tools</text>
+
+  <!-- Arrows from models to UDF -->
+  <line x1="160" y1="360" x2="160" y2="395" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="400" y1="360" x2="400" y2="395" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="640" y1="360" x2="640" y2="395" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- Arrow from registry to models -->
+  <line x1="610" y1="180" x2="160" y2="230" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="610" y1="180" x2="400" y2="230" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="610" y1="180" x2="640" y2="230" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="4,2"/>
+</svg>

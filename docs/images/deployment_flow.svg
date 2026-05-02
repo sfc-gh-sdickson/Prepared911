@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="white"/>
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">Deployment Flow</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="55" width="160" height="60" rx="8" fill="#e8f4fd" stroke="#29B5E8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="80" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">01. Database</text>
+  <text x="130" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Schemas + Warehouse</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="85" x2="240" y2="85" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#666"/></marker></defs>
+
+  <!-- Step 2 -->
+  <rect x="240" y="55" width="160" height="60" rx="8" fill="#e8f4fd" stroke="#29B5E8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="80" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">02. Tables</text>
+  <text x="320" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">9 Core Tables</text>
+
+  <line x1="400" y1="85" x2="430" y2="85" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="430" y="55" width="160" height="60" rx="8" fill="#fff8f0" stroke="#e67e22" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510" y="80" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">03. Ontology</text>
+  <text x="510" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">NIEM/NIMS Classes</text>
+
+  <line x1="590" y1="85" x2="620" y2="85" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="620" y="55" width="160" height="60" rx="8" fill="#e8f4fd" stroke="#29B5E8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="80" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">04. Synthetic Data</text>
+  <text x="700" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">5000+ Records</text>
+
+  <!-- Row 2 -->
+  <line x1="700" y1="115" x2="700" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="620" y="165" width="160" height="60" rx="8" fill="#f0fff0" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="190" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">05. Views</text>
+  <text x="700" y="210" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Analytical Views</text>
+
+  <line x1="620" y1="195" x2="590" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="430" y="165" width="160" height="60" rx="8" fill="#f0fff0" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510" y="190" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">06. Semantic Views</text>
+  <text x="510" y="210" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">3 Semantic Views</text>
+
+  <line x1="430" y1="195" x2="400" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="240" y="165" width="160" height="60" rx="8" fill="#f0fff0" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="190" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">07. Cortex Search</text>
+  <text x="320" y="210" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">3 Search Services</text>
+
+  <line x1="240" y1="195" x2="210" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="50" y="165" width="160" height="60" rx="8" fill="#fef0f0" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="190" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">08. ML Models</text>
+  <text x="130" y="210" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Train + Register (3)</text>
+
+  <!-- Row 3 -->
+  <line x1="130" y1="225" x2="130" y2="275" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="50" y="275" width="160" height="60" rx="8" fill="#fef0f0" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="300" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1a1a2e">09. Model UDFs</text>
+  <text x="130" y="320" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">5 Agent Functions</text>
+
+  <line x1="210" y1="305" x2="240" y2="305" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Final: Agent -->
+  <rect x="240" y="275" width="350" height="60" rx="10" fill="#29B5E8" stroke="#1a8bb5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="415" y="300" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white">10. PREPARED911_AGENT</text>
+  <text x="415" y="318" text-anchor="middle" font-family="Arial" font-size="11" fill="white">9 Tools: 3 Analyst + 3 Search + 3 Functions</text>
+
+  <!-- Legend -->
+  <rect x="50" y="380" width="700" height="100" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="400" y="405" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#333">Legend</text>
+  <rect x="80" y="420" width="20" height="15" fill="#e8f4fd" stroke="#29B5E8" stroke-width="1"/>
+  <text x="110" y="432" font-family="Arial" font-size="11" fill="#333">Infrastructure Setup</text>
+  <rect x="250" y="420" width="20" height="15" fill="#f0fff0" stroke="#2ecc71" stroke-width="1"/>
+  <text x="280" y="432" font-family="Arial" font-size="11" fill="#333">Data Access Layer</text>
+  <rect x="420" y="420" width="20" height="15" fill="#fef0f0" stroke="#e74c3c" stroke-width="1"/>
+  <text x="450" y="432" font-family="Arial" font-size="11" fill="#333">Machine Learning</text>
+  <rect x="590" y="420" width="20" height="15" fill="#fff8f0" stroke="#e67e22" stroke-width="1"/>
+  <text x="620" y="432" font-family="Arial" font-size="11" fill="#333">Ontology</text>
+  <rect x="80" y="450" width="20" height="15" fill="#29B5E8" stroke="#1a8bb5" stroke-width="1"/>
+  <text x="110" y="462" font-family="Arial" font-size="11" fill="#333">Agent (Final Output)</text>
+</svg>
